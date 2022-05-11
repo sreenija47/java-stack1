@@ -1,0 +1,26 @@
+
+import java.io.*;
+import java.util.*;
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		long n=Long.parseLong(br.readLine());
+		long t, flag=1;
+		 String temp=br.readLine();
+		while(temp != null ){
+		   //   if(temp==null) System.exit(0);
+		    t=Long.parseLong(temp);
+		    if(t<n && flag==1){
+		        flag=0;
+		        System.out.println((n+1));
+		       // break;
+		    }
+		    n=t;
+		     temp=br.readLine();
+		}
+	if(flag == 1)  System.out.println((n+1));
+    }
+ 
+}
